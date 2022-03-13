@@ -1,0 +1,96 @@
+.playlist {
+  margin-top: 30px;
+
+  table {
+    thead {
+      tr {
+        th {
+          border: 0;
+          padding: 12px;
+          font-weight: 500;
+          color: #fff;
+        }
+      }
+    }
+
+    td {
+      color: #e4e4e4;
+      font-weight: 200;
+    }
+
+    tbody {
+      background: rgb(28, 28, 31);
+
+      tr {
+        td {
+          border-bottom: 0;
+          border-top: 1px solid #000;
+          vertical-align: middle;
+          padding: 12px;
+
+          span {
+            font-size: 25px;
+            opacity: 0;
+            cursor: pointer;
+            padding-left: 20px;
+            color: #909090;
+            width: 45px;
+            height: 25px;
+            display: block;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          span.glyphicon-play-circle {
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          span.glyphicon-pause {
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+          }
+        }
+
+        &:hover {
+          td {
+            background: #4c4c4c;
+
+            span.glyphicon-play-circle {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .playing {
+        background: #4c4c4c;
+
+        td {
+          span.glyphicon-play-circle {
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+          }
+
+          span.glyphicon-pause {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+          }
+
+          &:hover {
+            span.glyphicon-play-circle {
+              visibility: hidden !important;
+              opacity: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
